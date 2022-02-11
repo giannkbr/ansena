@@ -11,7 +11,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
-                    Developed <i class="bx bx-code-alt text-danger"></i> </a>
+                    Made with <i class="bx bx-heart text-danger"></i>. </a>
                 </div>
             </div>
         </div>

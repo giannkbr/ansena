@@ -7,7 +7,7 @@
                 </button>
             </div>
             <div class="modal-body form">
-                <form action="" id="formspegawai" class="form-horizontal">
+                <form action="" id="formbarang" class="form-horizontal">
                     <div id="barang_result"></div>
                 </form>
             </div>

@@ -20,7 +20,22 @@
      <div class="col-12">
          <div class="card">
              <div class="card-body">
+                
+                <div class="row mb-2">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<button type="button" class="btn btn-success btn-responsive" data-toggle="tooltip"
+								data-placement="top" title="Tambah User" onclick="add_user()"><i
+									class="uil-plus-circle"></i> Add user</button>
+							<button class="btn btn-info btn-responsive" data-toggle="tooltip" data-placement="top"
+								title="Reload" onclick="reload_table()"><i class="uil-sync"></i> Reload</button>
+							<button id="deleteList" class="btn btn-danger btn-responsive" data-toggle="tooltip"
+								data-placement="right" title="Delete List" style="display: none;"
+								onclick="deleteList()"><i class="uil-trash-alt"></i> Delete List</button>
 
+						</div>
+					</div>
+				</div>
                  <p class="card-title-desc">Daftar Seluruh: <span class="badge bg-pill bg-soft-success font-size-12">USERS</span>.
                  </p>
 
