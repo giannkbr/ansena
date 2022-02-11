@@ -150,7 +150,7 @@ class User extends CI_Controller
             $this->load->view('admin/templates/header', $data);
             $this->load->view('admin/templates/sidebar', $data);
             $this->load->view('admin/templates/topbar', $data);
-            $this->load->view('userlist', $data);
+            $this->load->view('admin/user/userlist', $data);
             $this->load->view('admin/templates/footer');
         } else {
             // echo "Anda tidak berhak mengakses halaman ini";

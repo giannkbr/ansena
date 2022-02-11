@@ -67,7 +67,7 @@ class Admin extends CI_Controller
             $row[] = $dataBarang->nama;
             $row[] = $dataBarang->stok;
             $row[] = $dataBarang->harga;
-         
+            $row[] = $dataBarang->tanggal_masuk;
             $row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_barang(' . "'" . $dataBarang->id . "'" . ')"><i class="uil-edit"></i></i></a>
         			<a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_barang(' . "'" . $dataBarang->id . "'" . ')"><i class="fas fa-trash-alt"></i></a>';
 
@@ -86,6 +86,7 @@ class Admin extends CI_Controller
     public function ajax_edit($id)
     {
         $data = $this->M_admin->get_by_id($id);
+        $data->tanggal_masuk = ($data->tanggal_masuk == '0000-00-00') ? '' : $data->tanggal_masuk;
         echo json_encode($data);
     }
 
@@ -96,6 +97,7 @@ class Admin extends CI_Controller
             'nama'      => htmlspecialchars($this->input->post('nama', TRUE)),
             'stok'    => htmlspecialchars($this->input->post('stok', TRUE)),
             'harga'    => htmlspecialchars($this->input->post('harga', TRUE)),
+            'tanggal_masuk'    => htmlspecialchars($this->input->post('tanggal_masuk', TRUE)),
         );
 
         if (!empty($_FILES['foto_barang']['name'])) {
@@ -114,6 +116,7 @@ class Admin extends CI_Controller
             'nama'      => htmlspecialchars($this->input->post('nama', TRUE)),
             'stok'    => htmlspecialchars($this->input->post('stok', TRUE)),
             'harga'    => htmlspecialchars($this->input->post('harga', TRUE)),
+            'tanggal_masuk'    => htmlspecialchars($this->input->post('tanggal_masuk', TRUE)),
         );
 
         if ($this->input->post('remove_photo')) {
@@ -225,6 +228,13 @@ class Admin extends CI_Controller
                 $data['error_string'][] = 'Invalid Value';
                 $data['status'] = FALSE;
             }
+        }
+
+
+        if ($this->input->post('tanggal_masuk') == '') {
+            $data['inputerror'][] = 'tanggal_masuk';
+            $data['error_string'][] = 'Tanggal masuk tidak boleh kosong';
+            $data['status'] = FALSE;
         }
 
         // if ($data['status'] === FALSE) {

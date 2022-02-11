@@ -8,6 +8,8 @@
 <script src="<?= base_url('assets/'); ?>libs/jquery.counterup/jquery.counterup.min.js"></script>
 
 <script src="<?= base_url('assets/'); ?>js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
 
 </body>
 

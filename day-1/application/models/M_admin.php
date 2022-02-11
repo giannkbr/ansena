@@ -6,8 +6,8 @@ class M_admin extends CI_Model {
 
     
     var $table = 'barang';
-    var $column_order = array('nama', 'stok', 'harga', null);
-    var $column_search = array('nama', 'stok', 'harga');
+    var $column_order = array('nama', 'stok', 'harga', 'tanggal_masuk', null);
+    var $column_search = array('nama', 'stok', 'harga', 'tanggal_masuk');
     var $order = array('id' => 'asc');
 
     function __construct()
@@ -83,10 +83,6 @@ class M_admin extends CI_Model {
         $query = $this->db->get();
         return $query->row();
     }
-
-
-
-
 
     public function save($data)
     {
