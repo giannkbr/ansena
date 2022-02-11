@@ -102,9 +102,9 @@ class Auth extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'User Registration';
-            $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/registration', $data);
-            $this->load->view('templates/auth_footer');
+            $this->load->view('admin/templates/auth_header', $data);
+            $this->load->view('admin/auth/registration', $data);
+            $this->load->view('admin/templates/auth_footer');
         } else {
             // echo 'Data berhasil ditambahkan!';
             $email = $this->input->post('email', true);
@@ -245,9 +245,9 @@ class Auth extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Forgot Password';
-            $this->load->view('admin/admin/templates/auth_header', $data);
-            $this->load->view('admin/admin/auth/forgot-password');
-            $this->load->view('admin/admin/templates/auth_footer');
+            $this->load->view('admin/templates/auth_header', $data);
+            $this->load->view('admin/auth/forgot-password');
+            $this->load->view('admin/templates/auth_footer');
         } else {
             $email = $this->input->post('email');
             $user = $this->db->get_where('user', ['email' => $email, 'is_active' => 1])->row_array();
