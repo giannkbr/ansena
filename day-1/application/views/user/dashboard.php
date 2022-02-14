@@ -11,8 +11,8 @@
                 <div class="card-img-overlay container justify-content-center">
                     <div class="row">
                         <div class="col text-center">
-                            <p class="card-text font-bold display-3 text-white">NEW ARRIVAL 2022</p>
-                            <a href="<?= base_url('Product') ?>" class="btn yellow-button px-5 py-2">Pesan</a>
+                            <p class="card-text display-4 fw-bold text-white">NEW ARRIVAL 2022</p>
+                            <a href="" class="btn yellow-button px-5 py-2">Pesan</a>
                         </div>
                     </div>
                 </div>
@@ -23,8 +23,8 @@
                     <div class="row">
                         <div class="col text-center">
                             <h5 class="card-title yellow-text fw-light">Promo 20%</h5>
-                            <p class="card-text font-bold display-3 text-white">Tahun Baru Imlek</p>
-                            <a href="<?= base_url('Product') ?>" class="btn yellow-button px-5 py-2">Pesan</a>
+                            <p class="card-text display-4 fw-bold text-white">Tahun Baru Imlek</p>
+                            <a href="" class="btn yellow-button px-5 py-2">Pesan</a>
                         </div>
                     </div>
                 </div>

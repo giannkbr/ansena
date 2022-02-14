@@ -43,7 +43,10 @@
                                 </div>
                             </form>
                         </div>
-
+                        <div class="mt-4 text-center">
+                                    <p class="text-muted mb-0">Don't have an account ? <a href="<?= base_url('auth/registration'); ?>" class="fw-medium text-primary"> Register</a></p>
+                                    <p class="text-muted mb-0">Lost Password ? <a href="<?= base_url('auth/forgotpassword'); ?>" class="fw-medium text-primary"> Forgot Password</a></p>
+                        </div>
                     </div>
                 </div>
 

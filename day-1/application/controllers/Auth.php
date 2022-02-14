@@ -56,7 +56,7 @@ class Auth extends CI_Controller
                         redirect('admin');
                     } else { // akses user
                         // $this->session->set_userdata('akses', 2);
-                        redirect('admin');
+                        redirect('homepages');
                     }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
