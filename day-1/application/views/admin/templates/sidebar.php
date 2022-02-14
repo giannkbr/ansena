@@ -28,11 +28,20 @@
 				</li>
 
 				<li>
-					<a href="<?= base_url('admin/dataBarang'); ?>">
+					<a href="<?= base_url('barang'); ?>">
 						<i class="uil-user-circle"></i>
 						<span>Data Barang</span>
 					</a>
 				</li>
+
+
+				<li>
+					<a href="<?= base_url('transaksi'); ?>">
+						<i class="uil-user-circle"></i>
+						<span>Data Transaksi</span>
+					</a>
+				</li>
+
 
 				<li class=" menu-title">User
 				</li>

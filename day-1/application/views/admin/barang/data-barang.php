@@ -164,7 +164,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" id="btnSave" onclick="save()" class="btn btn-primary btn-responsive"
-					redirect(site_url().'admin/dataBarang');>Simpan </button> <button type="button"
+					redirect(site_url().'barang');>Simpan </button> <button type="button"
 					class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
@@ -193,7 +193,7 @@
 			"order": [],
 
 			"ajax": {
-				"url": "<?php echo base_url('admin/ajax_list') ?>",
+				"url": "<?php echo base_url('barang/ajax_list') ?>",
 				"type": "POST"
 			},
 
@@ -312,7 +312,7 @@
 		$('.form-group').removeClass('has-error');
 		$('.help-block').empty();
 		$.ajax({
-			url: "<?php echo base_url('admin/ajax_edit/') ?>/" + id,
+			url: "<?php echo base_url('barang/ajax_edit/') ?>/" + id,
 			type: "GET",
 			dataType: "JSON",
 			success: function (data) {
@@ -358,9 +358,9 @@
 		$('#btnSave').attr('disabled', true);
 		var url;
 		if (save_method == 'add') {
-			url = "<?php echo base_url('admin/ajax_add') ?>";
+			url = "<?php echo base_url('barang/ajax_add') ?>";
 		} else {
-			url = "<?php echo base_url('admin/ajax_update') ?>";
+			url = "<?php echo base_url('barang/ajax_update') ?>";
 		}
 
 		var formData = new FormData($('#form')[0]);
@@ -418,7 +418,7 @@
 			if (isConfirm.value) {
 
 				$.ajax({
-					url: "<?php echo base_url('admin/ajax_delete') ?>/" + id,
+					url: "<?php echo base_url('barang/ajax_delete') ?>/" + id,
 					type: "POST",
 					dataType: "JSON",
 					success: function (data) {
@@ -470,7 +470,7 @@
 						data: {
 							id: list_id
 						},
-						url: "<?php echo base_url('admin/ajax_list_delete') ?>",
+						url: "<?php echo base_url('barang/ajax_list_delete') ?>",
 						type: "POST",
 						dataType: "JSON",
 						success: function (data) {
@@ -506,7 +506,7 @@
 
 	function view_barang(id) {
 		$.ajax({
-			url: "<?php echo base_url('admin/get_barang_result') ?>/" + id,
+			url: "<?php echo base_url('barang/get_barang_result') ?>/" + id,
 			method: "POST",
 			data: {
 				id: id
