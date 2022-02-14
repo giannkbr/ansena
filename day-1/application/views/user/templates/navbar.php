@@ -66,11 +66,6 @@
                                                 echo 'active';
                                             } ?>" href="<?= base_url('homepages') ?>">Home</a>
  				</li>
- 				<li class="nav-item">
- 					<a class="nav-link  <?php if ($this->uri->segment(1) == 'product' || $this->uri->segment(1) === FALSE) {
-                                                    echo 'active';
-                                                } ?>" href="<?= base_url('product') ?>">Produk</a>
- 				</li>
  			</ul>
  			<ul class="navbar-nav">
  				<!-- <li class="nav-item my-auto me-3">
