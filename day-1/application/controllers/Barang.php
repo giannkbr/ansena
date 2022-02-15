@@ -48,8 +48,8 @@ class Barang extends CI_Controller {
                 $row[] = '(No photo)';
 
             $row[] = $dataBarang->nama;
+            $row[] = "Rp " . number_format($dataBarang->harga, 2, ",", "."); ;
             $row[] = $dataBarang->stok;
-            $row[] = $dataBarang->harga;
             $row[] = $dataBarang->tanggal_masuk;
             $row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_barang(' . "'" . $dataBarang->id . "'" . ')"><i class="uil-edit"></i></i></a>
         			<a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_barang(' . "'" . $dataBarang->id . "'" . ')"><i class="fas fa-trash-alt"></i></a>';

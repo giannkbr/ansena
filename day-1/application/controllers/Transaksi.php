@@ -72,7 +72,7 @@ class Transaksi extends CI_Controller {
 
     public function ajax_list_delete()
     {
-        $list_id = $this->input->post('id_transaksi');
+        $list_id = $this->input->post('list_id');
         foreach ($list_id as $id_transaksi) {
             $this->M_transaksi->delete_by_id($id_transaksi);
         }
